@@ -33,7 +33,7 @@ variant="captionCentered"
   let {
     src = "",
     alt = "",
-    caption = "Caption tk tk tk",
+    caption = "",
     variant = "default",
   } = $props();
 

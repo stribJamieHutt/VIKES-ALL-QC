@@ -16,7 +16,7 @@ Wrap this component around the markup you want rendered.
 </script>
 
 <h2
-  class="font-editorial-non-news-heading-05 md:font-editorial-non-news-heading-04 text-text-primary"
+  class="font-editorial-non-news-heading-05 !text-[1.75rem] md:font-editorial-non-news-heading-04 text-text-primary"
 >
   {@render children?.()}
 </h2>

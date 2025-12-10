@@ -15,7 +15,7 @@
             heroImageCaption="Lorem ipsum dolor"
             heroImageAltText=""
             dek="Lorem ipsum dolor sit amet consectetur adipiscing elit, fusce sociis at montes vitae tempor enim, venenatis tristique feugiat arcu dis ridiculus."
-            authorName="Bryan Brussee"
+            authorName="Star Tribune Staff"
             authorBioUrl="https://www.startribune.com/bryan-brussee/8455834"
         />
     </GridRow>
