@@ -5,6 +5,7 @@
   let items = [];
   let loading = true;
   let error = '';
+  let groupClass = '';
 
   onMount(async () => {
     try {
@@ -21,19 +22,35 @@
       loading = false;
     }
   });
+
+  // some helpers
+
+  function getGroupClass(group) {
+    if (group === 'Offense') return 'offense';
+    if (group === 'Defense') return 'defense';
+    return 'specialteams';
+  }
 </script>
 
-<div class="card-list">
+<div
+  class="card-list max-w-[1500px] flex flex-row flex-wrap p-0 m-auto justify-center"
+>
   {#each items as item}
-    <div class="card card-{items.indexOf(item) + 1}">
+    <div
+      class="card card-{items.indexOf(item) + 1} {getGroupClass(
+        item.group,
+      )} cursor-pointer p-0 pb-8 aspect-[1750/2457] min-w-[15vw] bg-transparent perspective-[1000px]"
+    >
       <div class="poslabel">{item.position}</div>
-      <div class="card-content">
+      <div class="card-content relative w-full h-full">
         <div
-          class="card-front"
-          style="background-image:url('https://static.startribune.com{item.image_url}');background-position:bottom center;"
+          class="card-front absolute w-full h-full bg-no-repeat bg-contain bg-center p-0"
+          style="background-image:url('https://static.startribune.com{item.image_url}');"
         ></div>
-        <div class="card-back">
-          <div class="cardback-content">
+        <div class="card-back absolute w-full h-full">
+          <div
+            class="cardback-content relative aspect-[1750/2457] bg-cover w-full h-full bg-[url('https://static.startribune.com/news/projects/all/2025-VIKES-ALLQC/img/cardback.png')]"
+          >
             <div class="card-header">
               <div class="nameplate">{item.name}</div>
               <div class="posinfo">
@@ -57,53 +74,4 @@
   {/each}
 </div>
 
-<style>
-  /* The flip card container - set the width and height to whatever you want. We
-have added the border property to demonstrate that the flip itself goes out of
-the box on hover (remove perspective if you don't want the 3D effect */
-  .flip-card {
-    background-color: transparent;
-    width: 300px;
-    height: 200px;
-    border: 1px solid #f1f1f1;
-    perspective: 1000px; /* Remove this if you don't want the 3D effect */
-  }
-
-  /* This container is needed to position the front and back side */
-  .flip-card-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    transition: transform 0.8s;
-    transform-style: preserve-3d;
-  }
-
-  /* Do an horizontal flip when you move the mouse over the flip box container */
-  .flip-card:hover .flip-card-inner {
-    transform: rotateY(180deg);
-  }
-
-  /* Position the front and back side */
-  .flip-card-front,
-  .flip-card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    -webkit-backface-visibility: hidden; /* Safari */
-    backface-visibility: hidden;
-  }
-
-  /* Style the front side (fallback if image is missing) */
-  .flip-card-front {
-    background-color: #bbb;
-    color: black;
-  }
-
-  /* Style the back side */
-  .flip-card-back {
-    background-color: dodgerblue;
-    color: white;
-    transform: rotateY(180deg);
-  }
-</style>
+<style></style>

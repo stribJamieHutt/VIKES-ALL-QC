@@ -125,16 +125,13 @@ padding: 10px;
   </GridRow>
 
   <GridRow variant={'fullBleed'}>
-    <div class="w-[100vw]">
-      <div class="leadertext">STAR TRIBUNE VIKINGS ALL-QUARTER CENTURY</div>
-      <div class="toggler">
-        Offense&nbsp;&nbsp;&nbsp;&nbsp;<b>|</b
-        >&nbsp;&nbsp;&nbsp;&nbsp;Defense&nbsp;&nbsp;&nbsp;&nbsp;<b>|</b
-        >&nbsp;&nbsp;&nbsp;&nbsp;Special Teams/Coach
-      </div>
-      <Cards />
-      <!-- <iframe style='width: 100%; min-height:1200px;' src="https://static.startribune.com/news/projects/all/2025-VIKES-ALLQC/iframe%20test/clean_vikesQClocal.html" title="description"></iframe> -->
+    <div class="leadertext">STAR TRIBUNE VIKINGS ALL-QUARTER CENTURY</div>
+    <div class="toggler">
+      Offense&nbsp;&nbsp;&nbsp;&nbsp;<b>|</b
+      >&nbsp;&nbsp;&nbsp;&nbsp;Defense&nbsp;&nbsp;&nbsp;&nbsp;<b>|</b
+      >&nbsp;&nbsp;&nbsp;&nbsp;Special Teams/Coach
     </div>
+    <Cards />
   </GridRow>
 </Grid>
 
