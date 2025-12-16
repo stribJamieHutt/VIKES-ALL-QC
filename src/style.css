@@ -88,20 +88,7 @@
       margin: auto;
   }
 
-  .hero-text h1 {
-      font-family: 'Publico Banner';
-      font-size: 3.15rem;
-      line-height: 1.1;
-      margin-bottom: 30px;
-  }
 
-  .hero-text p {
-      font-family: 'Publico Headline';
-      font-size: 1.55rem;
-      max-width: 550px;
-      margin: auto;
-      padding-bottom: 40px;
-  }
 
   div.byline {
       font-family: 'Graphik';
@@ -420,4 +407,13 @@
       background-color: rgba(255, 251, 239, 1) 100%;
       width: 76%;
       margin: -55px auto auto auto;
+  }
+
+  .offenseGroup .card.offense {
+      display: block;
+  }
+
+  .offenseGroup .card.defense,
+  .offenseGroup .card.specialteams {
+      display: none;
   }

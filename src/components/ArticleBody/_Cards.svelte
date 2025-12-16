@@ -39,7 +39,7 @@
     <div
       class="card card-{items.indexOf(item) + 1} {getGroupClass(
         item.group,
-      )} cursor-pointer p-0 pb-8 aspect-[1750/2457] min-w-[15vw] bg-transparent perspective-[1000px]"
+      )} cursor-pointer p-0 pb-8 aspect-[1750/2457] min-w-[20vw] bg-transparent perspective-[1000px]"
     >
       <div class="poslabel">{item.position}</div>
       <div class="card-content relative w-full h-full">

@@ -11,6 +11,11 @@
   let isMobile = $derived(innerWidth < 768);
   let isTablet = $derived(innerWidth >= 768 && innerWidth < 1024);
   let isDesktop = $derived(innerWidth >= 1024);
+
+  let groupClass = 'offenseGroup';
+  function setGroup(group) {
+    groupClass = group;
+  }
 </script>
 
 <svelte:window bind:innerWidth />
@@ -127,11 +132,19 @@ padding: 10px;
   <GridRow variant={'fullBleed'}>
     <div class="leadertext">STAR TRIBUNE VIKINGS ALL-QUARTER CENTURY</div>
     <div class="toggler">
-      Offense&nbsp;&nbsp;&nbsp;&nbsp;<b>|</b
-      >&nbsp;&nbsp;&nbsp;&nbsp;Defense&nbsp;&nbsp;&nbsp;&nbsp;<b>|</b
-      >&nbsp;&nbsp;&nbsp;&nbsp;Special Teams/Coach
+      <button class="pl-4 pr-4" on:click={() => setGroup('offenseGroup')}>
+        Offense
+      </button>
+      <button class="pl-4 pr-4" on:click={() => setGroup('defenseGroup')}>
+        Defense
+      </button>
+      <button class="pl-4 pr-4" on:click={() => setGroup('specialteamsGroup')}>
+        Special Teams/Coach
+      </button>
     </div>
-    <Cards />
+    <div id="cardGroups" class={groupClass}>
+      <Cards />
+    </div>
   </GridRow>
 </Grid>
 
