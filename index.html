@@ -24,60 +24,73 @@
   .card-list {
     display: flex;
     flex-flow: row wrap;
-    max-width: 2000px;
-    min-width: 970px;
     gap: 15px;
-    padding: 0 0 0 0%;
+    padding: 0;
     margin: auto;
     justify-content: center;
   }
 
-  .card-list .card {
+  .card {
     max-width: 48.5%;
     cursor: pointer;
     padding: 0 0 30px 0;
     aspect-ratio: 1750 / 2457 !important;
     min-width: 15vw;
+    background-color: transparent;
+    perspective: 1000px;
   }
 
-  .card-list .card .card-content {
-    height: 100%;
+  .card .card-content {
     position: relative;
-    background-color: #fff;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
   }
 
-  .card-list .card .card-content a,
-  .card-list .card .card-content a:hover,
-  .card-list .card .card-content a:visited,
-  .card-list .card .card-content a:active {
+  .card:hover .card-content {
+    transform: rotateY(180deg);
+  }
+
+  .card-front,
+  .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    /* Safari */
+    backface-visibility: hidden;
+    border-right: none;
+    border-bottom: none;
+    box-shadow: 7px 7px 7px #a1a1a1;
+    padding: 0px;
+    background-color: #fff;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  .card-back {
+    background-color: dodgerblue;
+    color: white;
+    transform: rotateY(180deg);
+  }
+
+  .card .card-content a,
+  .card .card-content a:hover,
+  .card .card-content a:visited,
+  .card .card-content a:active {
     box-shadow: 0 1px 0 #999;
     color: #000;
     padding: 0;
     text-decoration: none;
   }
 
-  .card-list .card .card-content a:hover,
-  .card-list .card .card-content a:active {
+  .card .card-content a:hover,
+  .card .card-content a:active {
     box-shadow: 0 1px 0 #444;
     transition: all 0.25s ease;
-  }
-
-  .front,
-  .back {
-    height: 100%;
-    border-right: none;
-    border-bottom: none;
-    box-shadow: 7px 7px 7px #a1a1a1;
-    padding: 0px;
-    position: relative;
-    background-color: #fff;
-  }
-
-  .front,
-  .back {
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
   }
 
   .poslabel {
@@ -159,9 +172,7 @@
     letter-spacing: 1.5px;
   }
 
-  body {
-    margin: 0 !important;
-  }
+
 
   .cardback-content {
     backface-visibility: hidden;
