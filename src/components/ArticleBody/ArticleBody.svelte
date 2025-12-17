@@ -116,7 +116,7 @@
     >
   </GridRow>
 
-  <GridRow additionalClasses="justify-self-center text-center w-[60%] mx-auto pt-12 pb-8">
+  <GridRow additionalClasses="justify-self-center text-center w-[60%] mx-auto pt-16 pb-14">
     <hr style="border-width: 2px;border-color: #ffb601 !important;" />
     <div style="margin: -45px auto auto auto;max-width: 85px;background: white;padding: 10px;">
       <img src="https://static.startribune.com/news/projects/all/2025-VIKES-ALLQC/png%20assets/purple%20logo1.png"/>
@@ -124,7 +124,7 @@
   </GridRow>
 
   <GridRow variant={'fullBleed'}>
-    <div class="leadertext">STAR TRIBUNE VIKINGS ALL-QUARTER CENTURY</div>
+    <div class="leadertext pb-4">STAR TRIBUNE VIKINGS<br>ALL-QUARTER CENTURY</div>
     
     <!-- print the nav buttons -->
     
@@ -132,7 +132,7 @@
       {#each groups as g}
         <button
           type="button"
-          class="pl-4 pr-4"
+          class="pl-4 pr-4 uppercase"
           class:active={activeGroup === g.className}
           on:click={() => setGroup(g.className)}
         >
