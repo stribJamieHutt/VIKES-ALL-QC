@@ -63,7 +63,7 @@
               <span class="blurb-text">{item.blurb}</span>
               <span class="attrib">&mdash; {item.blurb_author}</span>
               <span class="other_voters"
-                >Also recieving votes:<br />{item.other_votes}</span
+                >Also recieving votes:<br />{@html item.other_votes}</span
               >
             </div>
             <div class="fadedScroller_fade"></div>

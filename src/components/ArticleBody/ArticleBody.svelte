@@ -1,20 +1,25 @@
 <script>
   import Grid from '../Grid/Grid.svelte';
   import GridRow from '../Grid/_GridRow.svelte';
-  import Subhead from './_Subhead.svelte';
   import Paragraph from './_Paragraph.svelte';
   import Cards from './_Cards.svelte';
-  import Image from '../Image/Image.svelte';
-  import ScrollySection from '../Scrolly/ScrollySection.svelte';
 
   let innerWidth = $state(0);
   let isMobile = $derived(innerWidth < 768);
   let isTablet = $derived(innerWidth >= 768 && innerWidth < 1024);
   let isDesktop = $derived(innerWidth >= 1024);
 
-  let groupClass = 'offenseGroup';
-  function setGroup(group) {
-    groupClass = group;
+  const groups = [
+    { label: 'Offense', className: 'offenseGroup' },
+    { label: 'Defense', className: 'defenseGroup' },
+    { label: 'Special Teams/Coach', className: 'specialteamsGroup' }
+  ];
+
+  let activeGroup = $state(groups[0].className);
+  let groupClass = $derived(activeGroup); // tracks the active button click
+
+  function setGroup(next) {
+    activeGroup = next;
   }
 </script>
 
@@ -111,37 +116,31 @@
     >
   </GridRow>
 
-  <GridRow
-    additionalClasses="justify-self-center text-center w-[60%] mx-auto pt-12 pb-8"
-  >
+  <GridRow additionalClasses="justify-self-center text-center w-[60%] mx-auto pt-12 pb-8">
     <hr style="border-width: 2px;border-color: #ffb601 !important;" />
-    <div
-      style="
-margin: -45px auto auto auto;
-max-width: 85px;
-background: white;
-padding: 10px;
-"
-    >
-      <img
-        src="https://static.startribune.com/news/projects/all/2025-VIKES-ALLQC/png%20assets/purple%20logo1.png"
-      />
+    <div style="margin: -45px auto auto auto;max-width: 85px;background: white;padding: 10px;">
+      <img src="https://static.startribune.com/news/projects/all/2025-VIKES-ALLQC/png%20assets/purple%20logo1.png"/>
     </div>
   </GridRow>
 
   <GridRow variant={'fullBleed'}>
     <div class="leadertext">STAR TRIBUNE VIKINGS ALL-QUARTER CENTURY</div>
+    
+    <!-- print the nav buttons -->
+    
     <div class="toggler">
-      <button class="pl-4 pr-4" on:click={() => setGroup('offenseGroup')}>
-        Offense
-      </button>
-      <button class="pl-4 pr-4" on:click={() => setGroup('defenseGroup')}>
-        Defense
-      </button>
-      <button class="pl-4 pr-4" on:click={() => setGroup('specialteamsGroup')}>
-        Special Teams/Coach
-      </button>
+      {#each groups as g}
+        <button
+          type="button"
+          class="pl-4 pr-4"
+          class:active={activeGroup === g.className}
+          on:click={() => setGroup(g.className)}
+        >
+          {g.label}
+        </button>
+      {/each}
     </div>
+
     <div id="cardGroups" class={groupClass}>
       <Cards />
     </div>
@@ -180,5 +179,4 @@ The following example uses a ternary to render an image edge-to-edge on mobile b
 ```
 -->
 
-<style>
-</style>
+<style></style>

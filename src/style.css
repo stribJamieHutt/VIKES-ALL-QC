@@ -417,3 +417,24 @@
   .offenseGroup .card.specialteams {
       display: none;
   }
+    
+  .defenseGroup .card.defense {
+      display: block;
+  }
+
+  .defenseGroup .card.offense,
+  .defenseGroup .card.specialteams {
+      display: none;
+  }
+
+  .specialteamsGroup .card.specialteams {
+      display: block;
+  }
+
+  .specialteamsGroup .card.offense,
+  .specialteamsGroup .card.defense {
+      display: none;
+  }
+  .active {
+    font-weight: bold;
+  }
