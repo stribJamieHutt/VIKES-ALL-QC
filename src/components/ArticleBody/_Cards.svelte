@@ -54,16 +54,16 @@
           >
             <div class="card-header">
               <div class="nameplate pb-2">{item.name}</div>
-              <div class="posinfo">
+              <div class="posinfo pb-1">
                 <span class="name" style="font-weight:bold; color: #4f2683">{item.position}</span>
                 <span class="jersey_num">#{item.jersey_number} &#8226; </span>
                 <span class="years">{item.years}</span>
               </div>
               <div class="blurb">
                 <span class="blurb-text">{item.blurb}</span>
-                <span class="attrib">&mdash; {item.blurb_author}</span>
-                <span class="other_voters"
-                  >Also recieving votes:<br />{@html item.other_votes}</span
+                <div class="attrib pb-1">&mdash; <b>{item.blurb_author}</b></div>
+                <div class="other_voters pt-2 pb-8"
+                  >Also recieving votes:<br />{@html item.other_votes}</div
                 >
               </div>
               <div class="fadedScroller_fade"></div>

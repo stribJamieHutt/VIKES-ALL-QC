@@ -269,7 +269,7 @@
 
     .blurb {
         max-height: 210px!important;
-        padding-top: 8px !important;
+        padding-top: 10px !important;
     }
 
     .posinfo {
@@ -301,7 +301,7 @@
 
     .blurb {
         max-height: 210px!important;
-        padding-top: 8px !important;
+        padding-top: 10px !important;
     }
 
     .posinfo {
@@ -330,7 +330,7 @@
 
     .blurb {
         max-height: 180px!important;
-        padding-top: 8px !important;
+        padding-top: 5px !important;
     }
 }
 
@@ -440,15 +440,6 @@
       padding: 5px 0;
   }
 
-  .blurb {
-      font-family: 'Graphik';
-      font-size: 15px;
-      overflow: scroll !important;
-      max-height: 190px;
-      margin: 18% 8.5% auto 12%;
-      text-align: justify;
-      padding-right: 2%;
-  }
 
   ::-webkit-scrollbar {
       -webkit-appearance: none;
