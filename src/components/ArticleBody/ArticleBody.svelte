@@ -12,7 +12,7 @@
   const groups = [
     { label: 'Offense', className: 'offenseGroup' },
     { label: 'Defense', className: 'defenseGroup' },
-    { label: 'Special Teams/Coach', className: 'specialteamsGroup' }
+    { label: 'ST/Coach', className: 'specialteamsGroup' }
   ];
 
   let activeGroup = $state(groups[0].className);
@@ -132,7 +132,7 @@
       {#each groups as g}
         <button
           type="button"
-          class="pl-4 pr-4 uppercase"
+          class="px-4 py-1 uppercase"
           class:active={activeGroup === g.className}
           on:click={() => setGroup(g.className)}
         >
