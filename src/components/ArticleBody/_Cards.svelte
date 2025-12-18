@@ -59,6 +59,14 @@
                 <span class="jersey_num">#{item.jersey_number} &#8226; </span>
                 <span class="years">{item.years}</span>
               </div>
+              <div class="blurb">
+                <span class="blurb-text">{item.blurb}</span>
+                <span class="attrib">&mdash; {item.blurb_author}</span>
+                <span class="other_voters"
+                  >Also recieving votes:<br />{@html item.other_votes}</span
+                >
+              </div>
+              <div class="fadedScroller_fade"></div>
             </div>
             <div class="blurb pt-1 pb-8">
               <span class="blurb-text">{item.blurb}</span>
