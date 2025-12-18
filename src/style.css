@@ -116,13 +116,6 @@
       padding-top: 11%;
   }
 
-  .nameplate {
-      font-family: 'Graphik';
-      font-weight: bold;
-      font-size: 28px;
-      line-height: 90%;
-  }
-
   .posinfo {
       font-family: 'Graphik Semibold';
       font-size: 12px;
@@ -284,7 +277,7 @@
     }
 
     .nameplate {
-        margin-top: 5px;
+        margin-top: 10px;
     }
     .fadedScroller_fade {
         height: 40px;
@@ -315,7 +308,7 @@
         font-size: 14px !important; 
     }
     .nameplate {
-        margin-top: 5px;
+        margin-top: 10px;
     }
 
     .fadedScroller_fade {
@@ -333,6 +326,11 @@
 @media screen and (max-width: 1500px) {
     .card-list .card {
         min-width: 245px !important;
+    }
+
+    .blurb {
+        max-height: 180px!important;
+        padding-top: 8px !important;
     }
 }
 

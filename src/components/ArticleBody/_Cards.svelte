@@ -52,7 +52,7 @@
             class="cardback-content relative aspect-[1750/2457] bg-cover w-full h-full bg-[url('https://static.startribune.com/news/projects/all/2025-VIKES-ALLQC/img/cardback.png')]"
           >
             <div class="card-header">
-              <div class="nameplate pt-2 pb-2">{item.name}</div>
+              <div class="nameplate pb-2">{item.name}</div>
               <div class="posinfo">
                 <span class="name" style="font-weight:bold; color: #4f2683">{item.position}</span>
                 <span class="jersey_num">#{item.jersey_number} &#8226; </span>
