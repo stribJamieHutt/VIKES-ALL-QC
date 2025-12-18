@@ -1,7 +1,7 @@
 <script>
   import { createEventDispatcher, onMount } from 'svelte';
   const DATA_URL =
-    'https://static.startribune.com/news/projects/all/2025-VIKES-ALLQC/data-v2.json';
+    'https://static.startribune.com/news/projects/all/2025-VIKES-ALLQC/data.json';
   let items = [];
   let loading = true;
   let error = '';
@@ -36,6 +36,7 @@
   class="card-list max-w-[1800px] flex flex-row flex-wrap p-0 m-auto justify-center"
 >
   {#each items as item}
+  {#if item.winner}
     <div
       class="card card-{items.indexOf(item) + 1} {getGroupClass(
         item.group,
@@ -71,6 +72,7 @@
         </div>
       </div>
     </div>
+    {/if}
   {/each}
 </div>
 
