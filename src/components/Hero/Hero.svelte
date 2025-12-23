@@ -60,13 +60,13 @@ Renders a visual replica of the Immersive Template hero.
     <!-- hero image -->
 
     <div class="desktop-hero-image hidden lg:block max-w-[1800px] mx-auto">
-      <img class="" alt="Viking Quarter Century Team hero" src="https://ststatic.stimg.co/news/projects/all/2025-VIKES-ALLQC/img/lg-placeholder.png?w=1800" />
+      <img class="" alt="Viking Quarter Century Team hero" src="https://ststatic.stimg.co/news/projects/all/2025-VIKES-ALLQC/img/ALLQChero.png?w=1800" />
     </div>
     <div class="tablet-hero-image hidden md:block lg:hidden max-w-[1800px] mx-auto">
-      <img class="" alt="Viking Quarter Century Team hero" src="https://ststatic.stimg.co/news/projects/all/2025-VIKES-ALLQC/img/md-placeholder.png?w=1200" />
+      <img class="" alt="Viking Quarter Century Team hero" src="https://ststatic.stimg.co/news/projects/all/2025-VIKES-ALLQC/img/ALLQCmobilehero.png?w=900" />
     </div>
     <div class="tablet-hero-image block md:hidden max-w-[1800px] mx-auto">
-      <img class="" alt="Viking Quarter Century Team hero" src="https://ststatic.stimg.co/news/projects/all/2025-VIKES-ALLQC/img/xs-placeholder.png?w=768" />
+      <img class="" alt="Viking Quarter Century Team hero" src="https://ststatic.stimg.co/news/projects/all/2025-VIKES-ALLQC/img/ALLQCmobilehero.png?w=700" />
     </div>
     <p class="text-center mb-8 rt-Box font-utility-meta-reg-02 text-text-secondary col-span-full ArticleHero_leadart-standard-credit__Y1_wU mt-[6px] px-4">
       Images provided by the Associated Press, photo illustration by Joe Rull
