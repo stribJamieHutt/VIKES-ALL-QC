@@ -149,7 +149,7 @@
     </div>
   </GridRow>
 
-  <GridRow variant={'fullBleed'}>
+  <GridRow variant={'fullBleed'} additionalClasses="max-w-[2200px]">
     <div class="leadertext font-[Graphik-bold] uppercase text-center text-[1.5rem] mx-auto leading-[120%] pb-4 -tracking-[1px]">Minnesota Star Tribune<br>Vikings all-quarter century</div>
     
     <!-- print the nav buttons -->

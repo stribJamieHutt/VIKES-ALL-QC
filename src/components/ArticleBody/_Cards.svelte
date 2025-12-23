@@ -49,7 +49,7 @@
   }
 </script>
 
-<div class="my-4 card-list max-w-[1800px] gap-9 flex flex-row flex-wrap px-4 mx-auto justify-center">
+<div class="my-4 card-list gap-9 flex flex-row flex-wrap px-4 mx-auto justify-center">
   {#each items as item, i (i)}
     {#if item.winner}
       <button
@@ -89,7 +89,7 @@
                 {#if item.position != "Flex"}
                   <div class="posinfo text-center text-[.85rem]">
                     <span class="name font-[Graphik-semibold] text-[#4f2683]">{item.position}</span>
-                    <span class="jersey_num">#{item.jersey_number} &#8226; </span>
+                    <span class="jersey_num">{#if !item.position == "COACH"}#{/if}{item.jersey_number} &#8226; </span>
                     <span class="years">{item.years}</span>
                   </div>
                 {/if}
